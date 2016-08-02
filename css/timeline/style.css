@@ -1,0 +1,307 @@
+*{
+    margin:0;
+    padding:0;
+}
+.topBlock{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.matrix{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.matrix-cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.timeline_logo{
+    position: relative;
+    background: url("../../images/timeline/timeline.png") no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    margin:0 auto;
+    margin-top: 50px;
+}
+.selectBTN{
+    position: relative;
+    width: 100%;
+}
+.selectContainer{
+    position: relative;
+    width:600px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.selectPart{
+    position: absolute;
+    width:20%;
+    height:20%;
+}
+.addPart{
+    background-color: #4cae4c;
+}
+.searchPart{
+    background-color: #4B2840;
+}
+#searchBox {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+#addBox {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+/*style for the demo*/
+#testbox {
+    position: relative;
+    width: 100%
+}
+
+#testbox #searchBox {
+    position: absolute;
+    background-color: #00B4F1;
+    width: 100%;
+    height: 100px;
+    display: none;
+}
+#testbox #addBox {
+    position: absolute;
+    background-color: #ff7096;
+    width: 100%;
+    height: 100px;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.btnBox{
+    position: relative;
+    width:556px;
+    height: 70px;
+    margin:0 auto;
+}
+
+/* Box colors */
+.bg-1 {
+    background: #ECEFF1;
+    color: #37474f;
+}
+.bg-2 {
+    background: #7986cb;
+    color: #ECEFF1;
+}
+.bg-3 {
+    /*background: #37474f;*/
+    color: #fff;
+}
+
+/* Common button styles */
+.button {
+    cursor: pointer;
+    float: left;
+    min-width: 150px;
+    max-width: 250px;
+    display: block;
+    margin: 1em;
+    padding: 1em 2em;
+    border: none;
+    background: none;
+    color: inherit;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+.button:focus {
+    outline: none;
+}
+.button > span {
+    vertical-align: middle;
+}
+
+/* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+.bg-1 .button {
+    color: #37474f;
+    border-color: #37474f;
+}
+.bg-2 .button {
+    color: #ECEFF1;
+    border-color: #ECEFF1;
+}
+.bg-3 .button {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Sizes */
+.button--size-s {
+    font-size: 14px;
+}
+.button--size-m {
+    font-size: 16px;
+}
+.button--size-l {
+    font-size: 18px;
+}
+
+/* Typography and Roundedness */
+.button--text-upper {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.button--text-thin {
+    font-weight: 300;
+}
+.button--text-medium {
+    font-weight: 500;
+}
+.button--text-thick {
+    font-weight: 600;
+}
+.button--round-s {
+    border-radius: 5px;
+}
+.button--round-m {
+    border-radius: 15px;
+}
+.button--round-l {
+    border-radius: 40px;
+}
+
+/* Borders */
+.button--border-thin {
+    border: 1px solid;
+}
+.button--border-medium {
+    border: 2px solid;
+}
+.button--border-thick {
+    border: 3px solid;
+}
+
+
+/* Wayra */
+.button--wayra {
+    overflow: hidden;
+    width: 245px;
+    -webkit-transition: border-color 0.3s, color 0.3s;
+    transition: border-color 0.3s, color 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--wayra::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    background: #37474f;
+    z-index: -1;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+.button--wayra:hover {
+    color: #fff;
+    border-color: #3f51b5;
+}
+.button--wayra.button--inverted:hover {
+    color: #3f51b5;
+    border-color: #fff;
+}
+.button--wayra:hover::before {
+    opacity: 1;
+    background-color: #3f51b5;
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--wayra.button--inverted:hover::before {
+    background-color: #fff;
+}
+
+#imloading{
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    height: 100px;
+    width:50px;
+    background-color: #e9f0f5;
+}
+#imloading img{
+
+    text-align: center;
+}
+
+
+
+/* 超小屏幕（手机，小于 768px） */
+@media (max-width: 768px)  {
+    .timeline_logo{
+        position: relative;
+        background: url("../../images/timeline/timeline.png") no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        margin:0 auto;
+        margin-top: 30px;
+    }
+    .btnBox{
+        position: relative;
+        width:280px;
+        height: 140px;
+        margin:0 auto;
+    }
+}
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px)  and (max-width: 992px) {
+
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 992px)  and (max-width: 1200px) {
+
+}
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: 1200px) {
+
+}

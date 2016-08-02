@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>时间轴</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/resize.js"></script>
+    <script type="text/javascript" src="js/timeline/timeline_canvas.js"></script>
+    <script type="text/javascript" src="js/timeline/selectBTN.js"></script>
+    <script type="text/javascript" src="js/timeline/modernizr.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/timeline/style.css">
+    <link rel="stylesheet" type="text/css" href="css/timeline/timeline.css">
+    <link rel="stylesheet" type="text/css" href="css/timeline/magic.css">
+</head>
+<body>
+    <div class="topBlock">
+        <div class="matrix">
+            <canvas id="c"></canvas>
+        </div>
+        <div class="matrix-cover">
+            <div class="timeline_logo"></div>
+            <section class="selectBTN">
+                <div class="btnBox bg-3">
+                    <button data-test='rotateRight' id="addBtn" class="button button--wayra button--border-medium button--text-upper button--size-s button--text-thick button--inverted">Add</button>
+                    <button data-test='rotateLeft' id="searchBtn" class="button button--wayra button--border-medium button--text-upper button--size-s button--text-thick button--inverted">Search</button>
+                </div>
+            </section>
+            <section class="selectContainer">
+                <div id="testbox">
+                    <div id="addBox" class=""><span class="icon-diamond"></span></div>
+                    <div id="searchBox" class=""><span class="icon-diamond"></span></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="cd-timeline" class="cd-container">
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+                <img src="images/cd-icon-picture.svg" alt="Picture">
+            </div>
+            <div class="cd-timeline-content">
+                <h2>辣鸡一号</h2>
+                <p>路人局我拿黑百合，和对面黑百合对狙，天使跟在我后面牵线。然后我被爆头了。天使立马打字说:“垃圾”。我还在想怎么回他，这时，一声“英雄不朽”传至我的耳畔。我复活了，天使打字说:“再来。”</p>
+                <a href="#" class="cd-read-more">阅读更多</a>
+                <span class="cd-date">Jan 14</span>
+            </div>
+        </div>
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie">
+                <img src="images/cd-icon-movie.svg" alt="Movie">
+            </div>
+            <div class="cd-timeline-content">
+                <h2>辣鸡2号</h2>
+                <p>路人局我拿黑百合，和对面黑百合对狙，天使跟在我后面牵线。然后我被爆头了。天使立马打字说:“垃圾”。我还在想怎么回他，这时，一声“英雄不朽”传至我的耳畔。我复活了，天使打字说:“再来。”</p>
+                <a href="#" class="cd-read-more">阅读更多</a>
+                <span class="cd-date">Jan 18</span>
+            </div>
+        </div>
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+                <img src="images/cd-icon-picture.svg" alt="Picture">
+            </div>
+            <div class="cd-timeline-content">
+                <h2>辣鸡3号</h2>
+                <p>路人局我拿黑百合，和对面黑百合对狙，天使跟在我后面牵线。然后我被爆头了。天使立马打字说:“垃圾”。我还在想怎么回他，这时，一声“英雄不朽”传至我的耳畔。我复活了，天使打字说:“再来。”</p>
+                <a href="#" class="cd-read-more">阅读更多</a>
+                <span class="cd-date">Jan 24</span>
+            </div>
+        </div>
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                <img src="images/cd-icon-location.svg" alt="Location">
+            </div>
+            <div class="cd-timeline-content">
+                <h2>辣鸡4号</h2>
+                <p>路人局我拿黑百合，和对面黑百合对狙，天使跟在我后面牵线。然后我被爆头了。天使立马打字说:“垃圾”。我还在想怎么回他，这时，一声“英雄不朽”传至我的耳畔。我复活了，天使打字说:“再来。”</p>
+                <a href="#" class="cd-read-more">阅读更多</a>
+                <span class="cd-date">Feb 14</span>
+            </div>
+        </div>
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                <img src="images/cd-icon-location.svg" alt="Location">
+            </div>
+            <div class="cd-timeline-content">
+                <h2>辣鸡5号</h2>
+                <p>路人局我拿黑百合，和对面黑百合对狙，天使跟在我后面牵线。然后我被爆头了。天使立马打字说:“垃圾”。我还在想怎么回他，这时，一声“英雄不朽”传至我的耳畔。我复活了，天使打字说:“再来。”</p>
+                <a href="#" class="cd-read-more">阅读更多</a>
+                <span class="cd-date">Feb 18</span>
+            </div>
+        </div>
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie">
+                <img src="images/cd-icon-movie.svg" alt="Movie">
+            </div>
+            <div class="cd-timeline-content">
+                <h2>辣鸡6号</h2>
+                <p>路人局我拿黑百合，和对面黑百合对狙，天使跟在我后面牵线。然后我被爆头了。天使立马打字说:“垃圾”。我还在想怎么回他，这时，一声“英雄不朽”传至我的耳畔。我复活了，天使打字说:“再来。”</p>
+                <a href="#" class="cd-read-more">阅读更多</a>
+                <span class="cd-date">Feb 26</span>
+            </div>
+        </div>
+    </section>
+    <div id="imloading">
+        <img src="svg/bars.svg" height="50px" width="50px">
+    </div>
+    <script>
+        $(function(){
+            var sqlJson=[{'title':'辣鸡+1','content':'我也不知道说什么','time':'July 29'}];
+            $(window).scroll(function() {
+                var loading=$('#imloading');
+                var scrollTop = $(this).scrollTop();
+                var scrollHeight = $(document).height();
+                var windowHeight = $(this).height();
+                if (scrollTop + windowHeight == scrollHeight) {
+                    loading.fadeIn(800);
+                    var time = setTimeout(function(){
+                        loading.fadeOut();
+                    $('#cd-timeline').append('<div class=\'cd-timeline-block\'>' +
+                            '<div class=\'cd-timeline-img cd-movie\'>' +
+                            '<img src=\'images/cd-icon-movie.svg\' alt=\'Movie\'>' +
+                            '</div><div class=\'cd-timeline-content\'><h2>' + sqlJson[0].title + '</h2><p>' + sqlJson[0].content + '</p><a href=\'#\' class=\'cd-read-more\'>阅读更多</a><span class=\'cd-date\'>' + sqlJson[0].time + '</span></div></div>');
+                    $('#cd-timeline').append('<div class=\'cd-timeline-block\'>' +
+                            '<div class=\'cd-timeline-img cd-movie\'>' +
+                            '<img src=\'images/cd-icon-movie.svg\' alt=\'Movie\'>' +
+                            '</div><div class=\'cd-timeline-content\'><h2>' + sqlJson[0].title + '</h2><p>' + sqlJson[0].content + '</p><a href=\'#\' class=\'cd-read-more\'>阅读更多</a><span class=\'cd-date\'>' + sqlJson[0].time + '</span></div></div>');
+                    $('#cd-timeline').append('<div class=\'cd-timeline-block\'>' +
+                            '<div class=\'cd-timeline-img cd-movie\'>' +
+                            '<img src=\'images/cd-icon-movie.svg\' alt=\'Movie\'>' +
+                            '</div><div class=\'cd-timeline-content\'><h2>' + sqlJson[0].title + '</h2><p>' + sqlJson[0].content + '</p><a href=\'#\' class=\'cd-read-more\'>阅读更多</a><span class=\'cd-date\'>' + sqlJson[0].time + '</span></div></div>');
+                    $('#cd-timeline').append('<div class=\'cd-timeline-block\'>' +
+                            '<div class=\'cd-timeline-img cd-movie\'>' +
+                            '<img src=\'images/cd-icon-movie.svg\' alt=\'Movie\'>' +
+                            '</div><div class=\'cd-timeline-content\'><h2>' + sqlJson[0].title + '</h2><p>' + sqlJson[0].content + '</p><a href=\'#\' class=\'cd-read-more\'>阅读更多</a><span class=\'cd-date\'>' + sqlJson[0].time + '</span></div></div>');
+                        var $timeline_block = $('.cd-timeline-block');
+                        //hide timeline blocks which are outside the viewport
+                        $timeline_block.each(function(){
+                            if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+                                $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+                            }
+                        });
+                        //on scolling, show/animate timeline blocks when enter the viewport
+                        $(window).on('scroll', function(){
+                            $timeline_block.each(function(){
+                                if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+                                    $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+                                }
+                            });
+                        });
+                    },2000);
+                }
+            });
+
+
+
+        var $timeline_block = $('.cd-timeline-block');
+        //hide timeline blocks which are outside the viewport
+        $timeline_block.each(function(){
+            if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+                $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+            }
+        });
+        //on scolling, show/animate timeline blocks when enter the viewport
+        $(window).on('scroll', function(){
+            $timeline_block.each(function(){
+                if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+                    $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+                }
+            });
+        });
+            });
+
+        $('html,body').animate({scrollTop:0}, 10);
+    </script>
+</body>
+</html>

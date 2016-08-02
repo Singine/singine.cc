@@ -1,0 +1,21 @@
+
+/*animation*/
+#timing {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+/*style for the demo*/
+#testbox { width: 30%; position: relative; z-index: 11; height: auto; }
+
+#testbox #timing { width: 100px; height: 100px; left: 12%; position: fixed; top: 200px; z-index: 13; text-align: center; line-height: 100px; font-size: 2.4em; background: #000; color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>singine.cc</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" /><!-- jump_pic -->
+    <link rel="stylesheet" type="text/css" href="css/component.css" /><!-- jump_pic -->
+    <script src="js/modernizr.custom.js"></script><!-- jump_pic -->
+    <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/radio.css">
+    <script type="text/javascript" src='js/stopExecutionOnTimeout.js?t=1'></script>
+    <script type="text/javascript" src='js/jquery.min.js'></script>
+    <script type="text/javascript" src='js/velocity.min.js'></script>
+    <script type="text/javascript" src='js/main.js'></script>
+</head>
+<body>
+
+<div class="scene">
+
+    <div class="page page-1 active">
+        <div class="page--rotater"></div>
+        <div class="page--content page-diy-1">
+            <h1 style="font-family: '微软雅黑';color: black" class="letter" data-letter="Album">Album</h1>
+        </div>
+        <div class="jump-box">
+            <div class="main">
+                <div class="container">
+                    <div class="stack">
+                        <ul id="elasticstack" class="stack__images">
+                            <li><img src="images/jump_pic/1.jpg" alt="01"/></li>
+                            <li><img src="images/jump_pic/2.png" alt="02"/></li>
+                            <li><img src="images/jump_pic/3.jpg" alt="03"/></li>
+                            <li><img src="images/jump_pic/4.jpg" alt="04"/></li>
+                            <li><img src="images/jump_pic/5.png" alt="05"/></li>
+                            <li><img src="images/jump_pic/6.png" alt="06"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <script src="js/draggabilly.pkgd.min.js"></script><!-- jump_pic -->
+            <script src="js/elastiStack.js"></script><!-- jump_pic -->
+
+            <script>
+            (function() {
+            var body = document.body,
+            titles = [].slice.call( document.querySelectorAll( '#stack-titles > li' ) ),
+            totalTitles = titles.length,
+            stack = new ElastiStack( document.getElementById( 'elasticstack' ), {
+            onUpdateStack : function( idx ) {
+            classie.remove( titles[idx === 0 ? totalTitles - 1 : idx - 1], 'current' );
+            classie.add( titles[idx], 'current' );
+            }
+            } ),
+            shapeEl = document.getElementById( 'morph-shape' ),
+            s = Snap( shapeEl.querySelector( 'svg' ) ),
+            pathEl = s.select( 'path' ),
+            paths = {
+            reset : pathEl.attr( 'd' ),
+            next  : shapeEl.getAttribute( 'data-morph-next' )
+            };
+
+            document.getElementById( 'stack-next' ).addEventListener( 'mousedown', nextItem );
+
+            function nextItem() {
+            classie.add( body, 'animating' );
+            classie.add( body, 'navigate-next' );
+            pathEl.stop().animate( { 'path' : paths.next }, 450,function() {
+            classie.remove( body, 'navigate-next' );
+            stack.nextItem( { transform : 'translate3d(0,-60px,400px)' } );
+            pathEl.stop().animate( { 'path' : paths.reset }, 100,function() {
+            classie.remove( body, 'animating' );
+            } );
+            } );
+            }
+            })();
+            </script><!-- jump_pic -->
+
+        </div>
+    </div>
+
+    <div class="page page-2">
+        <div class="page--rotater"></div>
+        <div class="page--content">
+            <h1 style="font-family: '微软雅黑';color: #f801e4;" class="letter" data-letter="Upload">Upload</h1>
+        </div>
+    </div>
+
+    <div class="page page-3">
+        <div class="page--rotater"></div>
+        <div class="page--content">
+            <h1>Page 3</h1>
+        </div>
+    </div>
+
+    <div class="page page-4">
+        <div class="page--rotater"></div>
+        <div class="page--content">
+            <h1>Page 4</h1>
+        </div>
+    </div>
+
+    <div class="page page-5">
+        <div class="page--rotater"></div>
+        <div class="page--content page-diy-5">
+            <h1 style="font-family: '微软雅黑';color: black" class="letter" data-letter="版本更新">版本更新</h1>
+        </div>
+
+    </div>
+
+    <div class="rt-point">
+        <span class="page-number page-number-1 active">1</span>
+        <span class="page-number page-number-2">2</span>
+        <span class="page-number page-number-3">3</span>
+        <span class="page-number page-number-4">4</span>
+        <span class="page-number page-number-5">5</span>
+    </div>
+
+    <div class="footer">
+        <div class="nav">
+            <ul>
+                <li class="nav--btn nav--btn-1 active" data-page="1"></li>
+                <li class="nav--btn nav--btn-2" data-page="2"></li>
+                <li class="nav--btn nav--btn-3" data-page="3"></li>
+                <li class="nav--btn nav--btn-4" data-page="4"></li>
+                <li class="nav--btn nav--btn-5" data-page="5"></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

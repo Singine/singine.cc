@@ -1,0 +1,36 @@
+body{
+    background-color: #326696;
+    margin: 0px;
+    overflow: hidden;
+    font-family:Monospace;
+    font-size:13px;
+    text-align:center;
+    font-weight: bold;
+    text-align:center;
+}
+.owl-container{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    left: 50%;
+    margin-left:  -200px;
+    top: 50%;
+    margin-top: -300px;
+}
+.loading-box{
+    position: absolute;
+
+    width:100%;
+    height: auto;
+    background-color: #2C3E50;
+    z-index: 99999;
+}
+.loading-location{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+}
